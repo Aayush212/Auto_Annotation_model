@@ -1,11 +1,12 @@
 from ultralytics import YOLO
 
 # Load YOLOv8n model 
-model = YOLO(r'C:\Users\Amazin\ultralytics\yoloenv\runs\train\custom_yolov8n5\weights\best.pt')
+model = YOLO(r'yolov8n.onxx')
 
 # Train the model
 model.train(
-    data=r'C:\Users\Amazin\ultralytics\yoloenv\data.yaml', 
+    data=r'Path to dataset.yaml file', 
+    augment=True,
     epochs=50,                   
     imgsz=640,                   
     batch=16,                    # Batch size
@@ -22,5 +23,4 @@ print(metrics)
 
 #exporting the model
 model.export(format='onnx') 
-#C:\Users\Amazin\ultralytics\yoloenv\runs\train\custom_yolov8n3\weights\best.pt
 
