@@ -1,11 +1,11 @@
 from ultralytics import YOLO
 
 # Load the trained model
-model = YOLO(r'C:\Users\Saksh\ultralytics\yoloenv\OK_NOTOK\yolo_mrp_training\weights\best.pt')
+model = YOLO(r'Path to best.pt')
 
 # Perform inference
 results = model.predict(
-    source=r'C:\Users\Saksh\ultralytics\yoloenv\OK_NOTOK\testdata3',
+    source=r'Path to test images folder',
     save=True,
     imgsz=640
 )
